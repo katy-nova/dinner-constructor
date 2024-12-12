@@ -73,7 +73,10 @@ public class DinnerConstructor {
             }
             combos.add(combo); // добавляем комбо в список комбо
         }
-        System.out.println(combos);
+        for (int i = 0; i < combos.size(); i++) {
+            System.out.println("Комбо " + (i + 1));
+            System.out.println(combos.get(i));
+        }
     }
 
 }

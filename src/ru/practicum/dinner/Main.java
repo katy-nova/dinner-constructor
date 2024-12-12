@@ -12,11 +12,6 @@ public class Main {
         dc = new DinnerConstructor();
         scanner = new Scanner(System.in);
         dc.selfAddDishes();
-        /*ArrayList<String> test = new ArrayList<>();
-        test.add("Напиток");
-        test.add("Гарнир");
-        test.add("Мясо");
-        dc.generateCombo(3, test);*/
 
         while (true) {
             printMenu();
@@ -62,8 +57,6 @@ public class Main {
         System.out.println("Вводите типы блюда, разделяя символом переноса строки (enter). Для завершения ввода введите пустую строку");
         String nextItem = scanner.nextLine();
         ArrayList<String> types = new ArrayList<>(); // создаем список, который будет аргументом метода
-
-        //реализуйте ввод типов блюд
         while (!nextItem.isEmpty()) {
             if (dc.checkType(nextItem)) { // проверка на существование типа
                 types.add(nextItem);
@@ -75,7 +68,6 @@ public class Main {
         }
         dc.generateCombo(numberOfCombos, types);
 
-        // сгенерируйте комбинации блюд и выведите на экран
 
     }
 }
